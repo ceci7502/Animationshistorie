@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#scene {
+    width: 100vw;
+    height: 56.25vw;
+
+    position: relative;
+}
+
+#baggrund {
+    width: 100%;
+    height: 100%;
+
+    background-image: url(Baggrundskitse.jpg);
+    background-size: 100% 100%;
+}
+
+#hund {
+    position: absolute;
+    left: 38vw;
+    top: 33vw;
+
+    width: 23vw;
+    height: 12.9vw;
+
+    background-image: url(Hund.svg);
+    background-size: 100%;
+
+    animation-name: hund;
+    animation-duration: 2s;
+    animation-iteration-count: 4;
+
+}
+
+#egern {
+    position: absolute;
+    left: 50vw;
+    top: 33vw;
+
+    width: 23vw;
+    height: 12.9vw;
+
+    background-image: url(Egern.svg);
+    background-size: 100%;
+
+    animation-name: egern;
+    animation-duration: 2s;
+    animation-iteration-count: 4;
+    animation-direction:normal;
+
+}
+
+@keyframes hund {
+    0% {
+        transform: translateX(-100vw) scale(4);
+    }
+}
+
+@keyframes egern {
+    0% {
+        transform: translateX(-100vw) scale(4);
+    }
+}
