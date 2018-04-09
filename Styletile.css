@@ -14,7 +14,43 @@ body {
     width: 100%;
     height: 100%;
 
-    background-image: url(Baggrundskitse.jpg);
+    background-image: url(mellemgundudendetaljer.jpg);
+    background-size: 100% 100%;
+}
+
+#forgrund {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 20vw;
+
+    background-image: url(buske.svg);
+    background-size: 100% 100%;
+}
+
+#skyer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -18vw;
+
+    background-image: url(skyer.svg);
+    background-size: 100% 100%;
+
+    animation-name: skyer;
+    animation-duration: 10s;
+    animation-iteration-count: 4;
+    animation-direction:normal;
+}
+
+#træ {
+    width: 50%;
+    height: 70%;
+    position: absolute;
+    top: 2vw;
+    left: 45vw;
+
+    background-image: url(tr%C3%A6.svg);
     background-size: 100% 100%;
 }
 
@@ -53,14 +89,40 @@ body {
 
 }
 
+
 @keyframes hund {
     0% {
-        transform: translateX(-100vw) scale(4);
+        left: 0px;
+    }
+    50% {
+        left: 200px;
+    }
+    100% {
+        left: 0px;
     }
 }
 
 @keyframes egern {
     0% {
-        transform: translateX(-100vw) scale(4);
+        left: 2px;
+    }
+    50% {
+        left: 270px;
+    }
+    100% {
+        left: 0px;
     }
 }
+
+@keyframes skyer {
+    0% {
+        left: -10px;
+    }
+    50% {
+        left: 200px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
