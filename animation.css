@@ -1,0 +1,260 @@
+/*BAGGRUND*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#scene {
+    width: 100vw;
+    height: 56.25vw;
+
+    position: relative;
+}
+
+#baggrund {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    background-image: url(mellemgundudendetaljer.jpg);
+    background-size: 100% 100%;
+}
+
+#forgrund {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 20vw;
+
+    background-image: url(buske.svg);
+    background-size: 100% 100%;
+}
+
+
+#skyer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -18vw;
+    width: 100%;
+
+    background-image: url(skyer.svg);
+    background-size: 100% 100%;
+
+    animation-name: skyer;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction:normal;
+}
+
+
+#tree {
+    width: 50%;
+    height: 70%;
+    position: absolute;
+    top: 2vw;
+    left: 45vw;
+
+    background-image: url(tree.svg);
+    background-size: 100% 100%;
+}
+
+/*HUND*/
+#hund {
+    width: 20vw;
+    height: 28.6vw;
+    position: absolute;
+    top: 20vw;
+    left: 0vw;
+
+    background-image: url(spritesheetudenbaggrundsfarve-01.svg);
+    background-size: 800% 100%;
+}
+
+.walking {
+    animation-name: walk;
+    animation-duration: 2s;
+    animation-timing-function: steps(8);
+    animation-iteration-count: infinite;
+}
+
+@keyframes walk {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -800% 0;
+    }
+}
+
+#hund_container {
+    position: absolute;
+}
+
+.moving {
+    animation-name: moving;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moving {
+     0% {
+        left: -30vw;
+    }
+    100% {
+        left: 35vw;
+    }
+}
+
+/*EGERN*/
+#egern {
+    width: 20vw;
+    height: 28.6vw;
+    position: absolute;
+    top: 20vw;
+    left: 20vw;
+
+    background-image: url(egernspritesheet-01.svg);
+    background-size: 800% 100%;
+}
+
+/*
+.klatre {
+    animation-name: klatre;
+    animation-duration: 5s;
+    animation-timing-function:linear;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards
+}
+
+@keyframes klatre {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -800% 0;
+    }
+}
+
+/*
+
+.walking {
+    animation-name: walk;
+    animation-duration: 2s;
+    animation-timing-function: steps(8);
+    animation-iteration-count: 1;
+
+}
+*/
+
+
+
+/*
+@keyframes walk {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -800% 0;
+    }
+}
+*/
+
+#egern_container {
+    position: absolute;
+}
+
+.moving {
+    animation-name: moving;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moving {
+     0% {
+        left: -30vw;
+    }
+    100% {
+        left: 35vw;
+    }
+}
+
+/*
+@keyframes skyer {
+    0% {
+        left: -10px;
+    }
+    50% {
+        left: 50px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+*/
+
+/*
+#hund {
+    position: absolute;
+    left: 38vw;
+    top: 33vw;
+
+    width: 23vw;
+    height: 12.9vw;
+
+    background-image: url(Hund.svg);
+    background-size: 100%;
+
+    animation-name: hund;
+    animation-duration: 2s;
+    animation-iteration-count: 4;
+
+}
+
+#egern {
+    position: absolute;
+    left: 50vw;
+    top: 33vw;
+
+    width: 23vw;
+    height: 12.9vw;
+
+    background-image: url(Egern.svg);
+    background-size: 100%;
+
+    animation-name: egern;
+    animation-duration: 2s;
+    animation-iteration-count: 4;
+    animation-direction:normal;
+
+}
+
+
+@keyframes hund {
+    0% {
+        left: 0px;
+    }
+    50% {
+        left: 200px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes egern {
+    0% {
+        left: 2px;
+    }
+    50% {
+        left: 270px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+*/
