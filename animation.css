@@ -20,6 +20,7 @@ body {
 
     background-image: url(mellemgundudendetaljer.jpg);
     background-size: 100% 100%;
+    z-index: 1;
 }
 
 #forgrund {
@@ -30,6 +31,7 @@ body {
 
     background-image: url(buske.svg);
     background-size: 100% 100%;
+    z-index: 5;
 }
 
 
@@ -44,11 +46,31 @@ body {
     background-size: 100% 100%;
 
     animation-name: skyer;
-    animation-duration: 10s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
-    animation-direction: normal;
+    animation-direction: alternate;
+    z-index: 2;
 }
 
+/*
+@keyframes skyer {
+    /*from {
+        transform: translateX(0)scale(0.7)
+    }
+    to {
+        transform: translate(100vw)scale(1)
+    }*/
+
+/*0% {
+        left: -10px;
+    }
+    50% {
+        left: 50px;
+    }
+    100% {
+        left: 0px;
+    }
+}*/
 
 #tree {
     width: 50%;
@@ -59,6 +81,7 @@ body {
 
     background-image: url(tree.svg);
     background-size: 100% 100%;
+    z-index: 4;
 }
 
 /*FAELLES*/
@@ -85,6 +108,8 @@ body {
     width: 20vw;
     height: 28.6vw;
     position: absolute;
+    z-index: 4;
+    /*outline: 2px solid red;*/
 }
 
 #hund_sprite {
@@ -122,12 +147,57 @@ body {
     left: 35vw;
 }
 
+.movingback_hund {
+    animation-name: movingback_hund_kf;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    transform: scale(-1, 1);
+}
+
+@keyframes movingback_hund_kf {
+    0% {
+        left: 35vw;
+    }
+    100% {
+        left: 0vw;
+    }
+}
+
+.position_in_hund_back {
+    left: 35vw;
+}
+
+
+.hund_turn {
+
+    animation-name: hund_turn_kf;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hund_turn_kf {
+
+    /* 0% {
+
+        left: 35vw;
+    }*/
+    100% {
+        transform: scale(-1, 1)
+    }
+}
+
 /*EGERN*/
 
 #egern_container {
     width: 20vw;
     height: 28.6vw;
     position: absolute;
+    z-index: 4;
 }
 
 #egern_sprite {
@@ -163,39 +233,3 @@ body {
 .position_in_egern {
     left: 55vw;
 }
-
-/*
-.klatre {
-    animation-name: klatre;
-    animation-duration: 5s;
-    animation-timing-function:linear;
-    animation-iteration-count: 1;
-    animation-fill-mode:forwards
-}
-
-@keyframes klatre {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: -800% 0;
-    }
-}
-
-/*
-
-
-
-/*
-@keyframes skyer {
-    0% {
-        left: -10px;
-    }
-    50% {
-        left: 50px;
-    }
-    100% {
-        left: 0px;
-    }
-}
-*/
